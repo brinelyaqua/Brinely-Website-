@@ -1466,6 +1466,10 @@ function submitForm() {
   const mob   = document.getElementById('f-mobile').value.trim();
   const state = document.getElementById('f-state').value;
   const pond  = document.getElementById('f-pond').value.trim();
+  const need  = document.getElementById('f-need').value;
+  const date  = document.getElementById('f-date').value;
+  const notes = document.getElementById('f-notes').value.trim();
+
   if (!name || !mob || !state || !pond) {
     alert('Please fill in: Name, Mobile, State, and Pond Size.');
     return;
@@ -1474,6 +1478,22 @@ function submitForm() {
     alert('Please enter a valid 10-digit Indian mobile number.');
     return;
   }
+
+  const lines = [
+    '🦐 *New Brinely Consultation Request*',
+    '',
+    `👤 *Name:* ${name}`,
+    `📱 *Mobile:* ${mob}`,
+    `📍 *State:* ${state}`,
+    `🌊 *Pond Size:* ${pond}`,
+    need  ? `🔍 *Help needed:* ${need}`        : '',
+    date  ? `📅 *Stocking Date:* ${date}`       : '',
+    notes ? `📝 *Notes:* ${notes}`               : '',
+  ].filter(Boolean).join('\n');
+
+  const waUrl = 'https://wa.me/918838262061?text=' + encodeURIComponent(lines);
+  window.open(waUrl, '_blank');
+
   document.getElementById('req-form').style.display = 'none';
   document.getElementById('fsuccess').style.display  = 'block';
 }
