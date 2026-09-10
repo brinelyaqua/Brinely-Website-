@@ -14,18 +14,65 @@
 <meta property="og:title" content="Brinely — Honest Shrimp Seed Advisory">
 <meta property="og:description" content="Free consultation. Verified hatcheries. Zero broker markup. 500+ farmers trust Brinely.">
 <meta property="og:locale" content="en_IN">
+<meta property="og:image" content="https://brinely.in/brinely-logo.jpeg">
+<meta property="og:site_name" content="Brinely">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Brinely — Honest Shrimp Seed Advisory">
+<meta name="twitter:description" content="Free consultation. Verified hatcheries. Zero broker markup.">
+<meta name="twitter:image" content="https://brinely.in/brinely-logo.jpeg">
 
+<!-- geo tags: replace lat/long with the EXACT pin coords from your Google Business Profile -->
+<meta name="geo.region" content="IN-TN">
+<meta name="geo.placename" content="Marakkanam, Tamil Nadu">
+<meta name="geo.position" content="12.1847;79.9505">
+<meta name="ICBM" content="12.1847, 79.9505">
+
+<!--
+  Entity binding for Google. TODO for owner:
+  1. Replace "sameAs" Google Maps URL with your real profile share link
+     (Google Business Profile -> Share -> copy link, e.g. https://maps.app.goo.gl/xxxx)
+  2. Replace geo lat/long with exact pin coords (Google Maps -> right-click pin -> copy).
+  3. Keep name / address / phone IDENTICAL to the Google Business Profile.
+-->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Brinely",
-  "description": "Shrimp seed advisory for Indian aquaculture farmers",
+  "@id": "https://brinely.in/#business",
+  "name": "Brinely - Better Seed Better Harvest",
+  "alternateName": "Brinely",
+  "description": "India's first honest shrimp seed advisory. Brinely helps Vannamei (Litopenaeus vannamei) farmers source verified, disease-free hatchery post-larvae (PL) with zero broker markup.",
   "url": "https://brinely.in",
+  "logo": "https://brinely.in/brinely-logo.jpeg",
+  "image": "https://brinely.in/brinely-logo.jpeg",
   "email": "brinelyaqua@gmail.com",
-  "address": {"@type": "PostalAddress", "addressCountry": "IN"},
+  "telephone": "+918838262061",
+  "priceRange": "Free",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Salt Road, Marakkanam Post & Taluk",
+    "addressLocality": "Marakkanam",
+    "addressRegion": "Tamil Nadu",
+    "postalCode": "604303",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 12.1847,
+    "longitude": 79.9505
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
   "areaServed": ["Andhra Pradesh","Tamil Nadu","Odisha","West Bengal","Gujarat","Karnataka","Kerala"],
-  "slogan": "Better Seed. Better Harvest. Better Future."
+  "slogan": "Better Seed. Better Harvest. Better Future.",
+  "sameAs": [
+    "https://www.instagram.com/brinelyaqua",
+    "https://www.google.com/maps/search/?api=1&query=Brinely%20-%20Better%20Seed%20Better%20Harvest%20Marakkanam"
+  ]
 }
 </script>
 
@@ -623,6 +670,9 @@ footer{background:var(--navy-dark);padding:64px 20px 32px}
 .footer-logo-img img{width:100%;height:100%;object-fit:cover}
 .footer-name{font-family:'DM Serif Display',serif;font-size:1.4rem;color:#fff}
 .footer-desc{font-size:13px;color:rgba(255,255,255,.45);line-height:1.8;max-width:280px}
+.footer-address{font-style:normal;font-size:12px;color:rgba(255,255,255,.4);line-height:1.9;margin-top:16px}
+.footer-address a{color:rgba(255,255,255,.55)}
+.footer-address a:hover{color:var(--teal-light)}
 .footer-contact{margin-top:20px;display:flex;flex-direction:column;gap:10px}
 .footer-contact a{
   font-size:13px;color:rgba(255,255,255,.5);
@@ -1300,7 +1350,15 @@ footer{background:var(--navy-dark);padding:64px 20px 32px}
           <a href="https://wa.me/918838262061" target="_blank" rel="noopener noreferrer">💬 WhatsApp: +91 88382 62061</a>
           <a href="mailto:brinelyaqua@gmail.com">📧 brinelyaqua@gmail.com</a>
           <a href="https://www.instagram.com/brinelyaqua?igsh=ZW9td3dtbXM0bG15" target="_blank" rel="noopener noreferrer">📷 Instagram: @brinelyaqua</a>
+          <!-- TODO: replace href with your real Google profile share link (maps.app.goo.gl/...) -->
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Brinely+-+Better+Seed+Better+Harvest+Marakkanam" target="_blank" rel="noopener noreferrer">📍 Find us on Google</a>
         </div>
+        <address class="footer-address">
+          Brinely — Better Seed Better Harvest<br>
+          Salt Road, Marakkanam Post &amp; Taluk<br>
+          Marakkanam, Tamil Nadu 604303, India<br>
+          Phone: <a href="tel:+918838262061">+91 88382 62061</a>
+        </address>
       </div>
 
       <div class="footer-col">
@@ -1347,7 +1405,7 @@ footer{background:var(--navy-dark);padding:64px 20px 32px}
         <span class="footer-badge">Zero Broker Markup</span>
       </div>
       <p class="footer-legal">
-        © 2024 Brinely. All rights reserved. ·
+        © 2026 Brinely. All rights reserved. ·
         <a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a>
       </p>
       <p class="footer-legal" style="margin-top:4px;opacity:.6">
