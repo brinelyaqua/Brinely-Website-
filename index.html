@@ -505,6 +505,61 @@ section{padding:88px 20px}
 }
 
 /* ═══════════════════════════════════
+   MARAKKANAM HUB
+═══════════════════════════════════ */
+.mk-panel{
+  margin-top:32px;background:var(--navy);color:#fff;
+  border-radius:var(--rxl);padding:28px 20px;box-shadow:var(--sh-lg);
+  position:relative;overflow:hidden;
+}
+.mk-panel::after{
+  content:'';position:absolute;right:-80px;top:-80px;width:240px;height:240px;
+  border-radius:50%;background:radial-gradient(circle,rgba(0,189,171,.25),transparent 70%);
+  pointer-events:none;
+}
+.mk-tag{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(0,189,171,.15);border:1px solid rgba(0,189,171,.4);
+  border-radius:100px;padding:5px 13px;
+  font-size:11px;font-weight:700;color:var(--teal);letter-spacing:.06em;text-transform:uppercase;
+}
+.mk-title{margin-top:14px;font-size:22px;font-weight:800;line-height:1.3}
+.mk-desc{margin-top:8px;font-size:14px;line-height:1.6;color:rgba(255,255,255,.7);max-width:620px}
+.mk-pts{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
+.mk-pt{
+  font-size:12px;font-weight:600;color:#fff;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);
+  border-radius:var(--rxs);padding:6px 10px;
+}
+.mk-grid{margin-top:24px;display:grid;grid-template-columns:1fr;gap:10px;position:relative;z-index:1}
+.mk-card{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
+  border-radius:var(--r);padding:16px;transition:border-color .2s,background .2s;
+}
+.mk-card:hover{border-color:var(--teal);background:rgba(255,255,255,.1)}
+.mk-loc{font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:4px}
+.mk-name{font-size:15px;font-weight:700;margin-bottom:8px}
+.mk-meta{display:flex;flex-wrap:wrap;gap:6px}
+.mk-chip{
+  font-size:10px;font-weight:700;color:var(--teal);
+  border:1px solid rgba(0,189,171,.4);border-radius:var(--rxs);padding:2px 8px;
+}
+.mk-cta{
+  margin-top:22px;display:inline-flex;align-items:center;gap:8px;
+  background:var(--teal);color:var(--navy);font-weight:800;font-size:14px;
+  border-radius:100px;padding:12px 22px;text-decoration:none;position:relative;z-index:1;
+}
+.mk-cta:hover{filter:brightness(1.08)}
+@media(min-width:640px){
+  .mk-panel{padding:36px 32px}
+  .mk-title{font-size:26px}
+  .mk-grid{grid-template-columns:1fr 1fr}
+}
+@media(min-width:960px){
+  .mk-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+/* ═══════════════════════════════════
    TESTIMONIALS
 ═══════════════════════════════════ */
 .t-grid{margin-top:48px;display:grid;grid-template-columns:1fr;gap:16px}
@@ -1089,6 +1144,63 @@ footer{background:var(--navy-dark);padding:64px 20px 32px}
   </div>
 </div>
 
+<!-- ══ MARAKKANAM HUB ══ -->
+<section id="marakkanam" aria-labelledby="mk-h">
+  <div class="mx">
+    <div class="eyebrow reveal">Our Home Base</div>
+    <h2 class="sec-h reveal" id="mk-h">Partner hatcheries in<br><em>Marakkanam</em></h2>
+    <p class="sec-sub reveal">Our office is on Salt Road, Marakkanam — right in the heart of Tamil Nadu's hatchery belt. We visit these hatcheries in person, every season.</p>
+
+    <div class="mk-panel reveal">
+      <span class="mk-tag">📍 Special Focus Area · Marakkanam, Villupuram Dt.</span>
+      <div class="mk-title">Hatcheries we work with directly</div>
+      <p class="mk-desc">Short distance from hatchery to your pond means less transport stress and better PL survival. Our team walks these facilities, checks broodstock and PCR reports on site, and tracks each batch's results.</p>
+      <div class="mk-pts">
+        <span class="mk-pt">✓ On-site visits</span>
+        <span class="mk-pt">✓ Batch-wise PCR check</span>
+        <span class="mk-pt">✓ Same-day PL pickup</span>
+        <span class="mk-pt">✓ Tamil-speaking advisors</span>
+      </div>
+
+      <!-- TODO: replace placeholder names/locations with real partner hatcheries -->
+      <div class="mk-grid">
+        <div class="mk-card">
+          <div class="mk-loc">Marakkanam</div>
+          <div class="mk-name">Hatchery Name 1</div>
+          <div class="mk-meta"><span class="mk-chip">Vannamei PL</span><span class="mk-chip">SPF · PCR</span></div>
+        </div>
+        <div class="mk-card">
+          <div class="mk-loc">Marakkanam</div>
+          <div class="mk-name">Hatchery Name 2</div>
+          <div class="mk-meta"><span class="mk-chip">Vannamei PL</span><span class="mk-chip">CAA Reg.</span></div>
+        </div>
+        <div class="mk-card">
+          <div class="mk-loc">Kaipani, Marakkanam</div>
+          <div class="mk-name">Hatchery Name 3</div>
+          <div class="mk-meta"><span class="mk-chip">Monodon PL</span><span class="mk-chip">SPF · PCR</span></div>
+        </div>
+        <div class="mk-card">
+          <div class="mk-loc">Koonimedu, Marakkanam</div>
+          <div class="mk-name">Hatchery Name 4</div>
+          <div class="mk-meta"><span class="mk-chip">Vannamei PL</span><span class="mk-chip">WSSV-Free</span></div>
+        </div>
+        <div class="mk-card">
+          <div class="mk-loc">Anumandai, Marakkanam</div>
+          <div class="mk-name">Hatchery Name 5</div>
+          <div class="mk-meta"><span class="mk-chip">Vannamei PL</span><span class="mk-chip">MPEDA Reg.</span></div>
+        </div>
+        <div class="mk-card">
+          <div class="mk-loc">ECR, Marakkanam</div>
+          <div class="mk-name">Hatchery Name 6</div>
+          <div class="mk-meta"><span class="mk-chip">Vannamei PL</span><span class="mk-chip">SPF · PCR</span></div>
+        </div>
+      </div>
+
+      <a class="mk-cta" href="#consult">Book a Marakkanam hatchery visit →</a>
+    </div>
+  </div>
+</section>
+
 <!-- ══ HATCHERY NETWORK ══ -->
 <section id="hatcheries" class="bg-alt" aria-labelledby="hatch-h">
   <div class="mx">
@@ -1388,6 +1500,7 @@ footer{background:var(--navy-dark);padding:64px 20px 32px}
         <div class="footer-col-title">Company</div>
         <ul>
           <li><a href="#farmers">Farmer Stories</a></li>
+          <li><a href="#marakkanam">Marakkanam Hatcheries</a></li>
           <li><a href="#hatcheries">Hatcheries</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="mailto:brinelyaqua@gmail.com">Contact Us</a></li>
