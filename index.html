@@ -490,6 +490,15 @@ section{padding:88px 20px}
 }
 .hatch-card:hover{border-color:var(--border-t);box-shadow:var(--sh-md)}
 .hatch-card:hover::before{transform:scaleY(1)}
+.hatch-logo{
+  width:52px;height:52px;border-radius:50%;margin-bottom:12px;
+  background:#fff;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
+}
+.hatch-logo img{width:100%;height:100%;object-fit:contain}
+.hatch-logo.mono{background:var(--navy);border-color:var(--navy);color:#fff;font-size:15px;font-weight:800;letter-spacing:.02em}
+.hatch-name a{color:inherit;text-decoration:none}
+.hatch-name a:hover{color:var(--teal-dark)}
 .hatch-state{font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-dark);margin-bottom:4px}
 .hatch-name{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:8px}
 .hatch-cert{
@@ -1105,47 +1114,31 @@ footer{background:var(--navy-dark);padding:64px 20px 32px}
 
     <div class="hatch-grid">
       <div class="hatch-card reveal">
-        <div class="hatch-state">Nellore, AP</div>
-        <div class="hatch-name">Nellore Aqua Hatcheries</div>
-        <span class="hatch-cert">SPF · WSSV-Free</span>
+        <div class="hatch-logo"><img src="hatcheries/jayjay.png" alt="Jay Jay Group logo" width="52" height="52" loading="lazy"></div>
+        <div class="hatch-state">Tamil Nadu &amp; Pondicherry</div>
+        <div class="hatch-name"><a href="https://www.jayjaygroup.com/" target="_blank" rel="noopener">Jay Jay Group</a></div>
+        <span class="hatch-cert">SPF Vannamei · Monodon</span>
       </div>
       <div class="hatch-card reveal">
-        <div class="hatch-state">East Godavari, AP</div>
-        <div class="hatch-name">Kakinada Coastal Farms</div>
-        <span class="hatch-cert">PCR Tested · ISO</span>
+        <div class="hatch-logo mono" aria-hidden="true">GM</div>
+        <div class="hatch-state">Chettikuppam, Marakkanam</div>
+        <div class="hatch-name">Golden Marine Harvest</div>
+        <span class="hatch-cert">Shrimp PL · CAA Listed</span>
       </div>
       <div class="hatch-card reveal">
-        <div class="hatch-state">Nagapattinam, TN</div>
-        <div class="hatch-name">Delta Hatcheries TN</div>
-        <span class="hatch-cert">SPF · MPEDA Reg.</span>
+        <div class="hatch-logo mono" aria-hidden="true">RH</div>
+        <div class="hatch-state">ECR, Chennai</div>
+        <div class="hatch-name"><a href="https://www.royalhatcheries.com/" target="_blank" rel="noopener">Royal Hatcheries</a></div>
+        <span class="hatch-cert">SPF Vannamei · Monodon</span>
       </div>
       <div class="hatch-card reveal">
-        <div class="hatch-state">Chilika, Odisha</div>
-        <div class="hatch-name">Chilika Premium PL</div>
-        <span class="hatch-cert">SPF Broodstock</span>
-      </div>
-      <div class="hatch-card reveal">
-        <div class="hatch-state">Veraval, Gujarat</div>
-        <div class="hatch-name">Saurashtra Aqua Seeds</div>
-        <span class="hatch-cert">PCR Certified</span>
-      </div>
-      <div class="hatch-card reveal">
-        <div class="hatch-state">Visakhapatnam, AP</div>
-        <div class="hatch-name">Vizag Coastal Seeds</div>
-        <span class="hatch-cert">SPF · ISO Certified</span>
-      </div>
-      <div class="hatch-card reveal">
-        <div class="hatch-state">Kalpakkam, TN</div>
-        <div class="hatch-name">Coromandel Hatcheries</div>
-        <span class="hatch-cert">WSSV-Free · PCR</span>
-      </div>
-      <div class="hatch-card reveal">
-        <div class="hatch-state">AP Coast</div>
-        <div class="hatch-name">Bheemunipatnam Seeds</div>
-        <span class="hatch-cert">Premium PL15</span>
+        <div class="hatch-logo"><img src="hatcheries/bmr.png" alt="BMR Group logo" width="52" height="52" loading="lazy"></div>
+        <div class="hatch-state">Marakkanam &amp; Anumanthai</div>
+        <div class="hatch-name"><a href="https://www.bmrgroups.com/hatcheries/" target="_blank" rel="noopener">BMR Group Hatcheries</a></div>
+        <span class="hatch-cert">On-site PCR Lab</span>
       </div>
       <div class="hatch-more reveal">
-        + 30 more verified hatcheries across Karnataka, Kerala, West Bengal &amp; the AP coast
+        + more verified partner hatcheries along the Tamil Nadu &amp; Pondicherry coast
       </div>
     </div>
   </div>
