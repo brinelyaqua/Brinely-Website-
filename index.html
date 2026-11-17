@@ -203,6 +203,42 @@ nav{
   pointer-events:none;
 }
 .hero-inner{max-width:780px;position:relative;z-index:1}
+.hero-wrap{position:relative;z-index:1;max-width:1200px;margin:0 auto}
+.hero-card{display:none}
+
+/* Hero quick-request card (desktop only — mobile uses full form below) */
+@media(min-width:1024px){
+  .hero-wrap{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:56px;align-items:center}
+  .hero h1{font-size:clamp(3.4rem,5.4vw,4.8rem)}
+  .hero-card{
+    display:block;background:#fff;border:1px solid var(--border);
+    border-radius:var(--rxl);box-shadow:var(--sh-lg);padding:28px;position:relative;
+  }
+  .hero-card::before{
+    content:'';position:absolute;top:0;left:24px;right:24px;height:3px;
+    border-radius:0 0 4px 4px;background:linear-gradient(90deg,var(--teal),var(--navy));
+  }
+}
+.hc-badge{
+  display:inline-flex;align-items:center;gap:6px;background:var(--teal-bg);color:var(--teal-dark);
+  border-radius:100px;padding:5px 12px;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+}
+.hc-h{font-family:'DM Serif Display',serif;font-size:1.65rem;color:var(--navy);line-height:1.2;margin:14px 0 6px}
+.hc-sub{font-size:13px;color:var(--text-muted);line-height:1.6;margin-bottom:18px}
+.hc-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.hc-card .form-group,.hero-card .form-group{margin-bottom:12px}
+.hc-check{
+  display:flex;align-items:center;gap:10px;background:var(--teal-bg2);border:1px solid var(--border-t);
+  border-radius:var(--rs);padding:11px 12px;font-size:13px;font-weight:600;color:var(--navy);
+  cursor:pointer;margin:4px 0 14px;
+}
+.hc-check input{width:17px;height:17px;accent-color:var(--teal);flex-shrink:0}
+.hero-card .form-submit{width:100%}
+.hc-foot{
+  display:flex;justify-content:space-between;gap:8px;margin-top:16px;padding-top:14px;
+  border-top:1px solid var(--border);font-size:11px;font-weight:700;color:var(--text-muted);
+}
+.hc-foot span::before{content:'✓ ';color:var(--teal)}
 
 .hero-tag{
   display:inline-flex;align-items:center;gap:8px;
@@ -923,6 +959,7 @@ footer{background:var(--navy-dark);padding:64px 20px 32px}
 
 <!-- ══ HERO ══ -->
 <section class="hero" aria-labelledby="hero-h1">
+  <div class="hero-wrap">
   <div class="hero-inner">
     <div class="hero-tag">
       <span class="tag-dot" aria-hidden="true"></span>
@@ -963,6 +1000,50 @@ footer{background:var(--navy-dark);padding:64px 20px 32px}
         <span><strong>Zero</strong> broker markup</span>
       </div>
     </div>
+  </div>
+
+  <aside class="hero-card" aria-labelledby="hc-h">
+    <span class="hc-badge">🦐 Free PL sample included</span>
+    <h2 class="hc-h" id="hc-h">Get seed options in 2 hours</h2>
+    <p class="hc-sub">Tell us what you need. An advisor WhatsApps you verified hatchery options — free.</p>
+
+    <div class="hc-row">
+      <div class="form-group">
+        <label class="form-label" for="hc-species">Species</label>
+        <select class="form-select" id="hc-species">
+          <option>Vannamei</option>
+          <option>Monodon</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="hc-qty">Lakh PL</label>
+        <input type="number" class="form-input" id="hc-qty" placeholder="e.g. 5" min="0" step="0.5" inputmode="decimal">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="hc-state">Your State</label>
+      <select class="form-select" id="hc-state">
+        <option value="">Select your state</option>
+        <option>Andhra Pradesh</option>
+        <option>Tamil Nadu</option>
+        <option>Odisha</option>
+        <option>West Bengal</option>
+        <option>Gujarat</option>
+        <option>Karnataka</option>
+        <option>Kerala</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <label class="hc-check">
+      <input type="checkbox" id="hc-sample" checked>
+      Send me a free sample first
+    </label>
+    <button class="form-submit" onclick="heroQuote()">Get Options on WhatsApp →</button>
+
+    <div class="hc-foot">
+      <span>PCR report</span><span>SPF hatcheries</span><span>Always free</span>
+    </div>
+  </aside>
   </div>
 </section>
 
@@ -1769,6 +1850,21 @@ function toggleFaq(btn) {
 
 /* Form */
 const val = id => document.getElementById(id).value.trim();
+
+/* Hero quick-request card */
+function heroQuote() {
+  const species = val('hc-species'), qty = val('hc-qty'), state = val('hc-state');
+  const sample = document.getElementById('hc-sample').checked;
+  const lines = [
+    '🦐 *Brinely Seed Request*',
+    '',
+    `🦐 *Species:* ${species}`,
+    qty   ? `🔢 *Quantity:* ${qty} lakh PL` : '',
+    state ? `📍 *State:* ${state}`          : '',
+    sample ? '🎁 *Please send me a free sample first*' : '',
+  ].filter(Boolean).join('\n');
+  window.open('https://wa.me/918838262061?text=' + encodeURIComponent(lines), '_blank');
+}
 const esc = t => t.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 function seedSpec() {
