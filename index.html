@@ -243,6 +243,13 @@ nav{
   display:inline-flex;align-items:center;gap:8px;transition:all .2s;
 }
 .btn-wa:hover{background:#dcfce7;transform:translateY(-2px)}
+.btn-sample{
+  background:#fff;color:var(--navy);
+  border:1.5px solid var(--navy);border-radius:var(--r);
+  padding:16px 24px;font-size:14px;font-weight:700;
+  display:inline-flex;align-items:center;gap:8px;transition:all .2s;
+}
+.btn-sample:hover{background:var(--navy);color:#fff;transform:translateY(-2px)}
 
 .hero-trust{display:flex;flex-wrap:wrap;gap:18px}
 .trust-pill{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--text-body)}
@@ -710,6 +717,34 @@ footer{background:var(--navy-dark);padding:64px 20px 32px}
 }
 .announce span{white-space:nowrap}
 .announce i{font-style:normal;color:var(--teal-light);margin:0 8px}
+@media(max-width:639px){
+  .announce{column-gap:14px}
+  .announce i{display:none}
+}
+
+/* ═══════════════════════════════════
+   FREE SAMPLE
+═══════════════════════════════════ */
+.sample-sec{background:var(--teal-bg2);border-top:1px solid var(--border-t);border-bottom:1px solid var(--border-t)}
+.sample-steps{margin-top:44px;display:grid;grid-template-columns:1fr;gap:14px}
+.sample-step{
+  background:#fff;border:1px solid var(--border);border-radius:var(--r);
+  padding:22px;box-shadow:var(--sh-sm);
+}
+.sample-num{
+  width:34px;height:34px;border-radius:50%;background:var(--teal);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;margin-bottom:12px;
+}
+.sample-title{font-weight:800;color:var(--navy);font-size:15px;margin-bottom:6px}
+.sample-desc{font-size:13px;color:var(--text-body);line-height:1.75}
+.sample-check{
+  margin-top:28px;background:#fff;border:1px dashed var(--border-t);border-radius:var(--r);
+  padding:20px 22px;
+}
+.sample-check-h{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-dark);margin-bottom:12px}
+.sample-check .exp-chips{margin-top:0}
+.sample-cta{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.sample-fine{font-size:12px;color:var(--text-muted);line-height:1.6}
 
 /* ═══════════════════════════════════
    SPECIES
@@ -810,6 +845,7 @@ footer{background:var(--navy-dark);padding:64px 20px 32px}
   .brood-grid{grid-template-columns:1fr 1fr}
   .pcr-box{padding:44px 40px}
   .pcr-steps{grid-template-columns:repeat(3,1fr)}
+  .sample-steps{grid-template-columns:1fr 1fr}
 }
 @media(min-width:960px){
   .hero{padding:108px 48px 88px}
@@ -823,6 +859,7 @@ footer{background:var(--navy-dark);padding:64px 20px 32px}
   .exp-num{font-size:4rem}
   .hatch-grid{grid-template-columns:repeat(4,1fr)}
   .brood-grid{grid-template-columns:repeat(3,1fr)}
+  .sample-steps{grid-template-columns:repeat(4,1fr)}
 }
 @media(min-width:1200px){
   .hero{padding:120px 80px 96px}
@@ -844,7 +881,7 @@ footer{background:var(--navy-dark);padding:64px 20px 32px}
 
 <!-- ══ ANNOUNCE BAR ══ -->
 <div class="announce" role="note">
-  <span>PCR report before dispatch</span><i aria-hidden="true">·</i><span>Choose your broodstock line</span><i aria-hidden="true">·</i><span>SPF-certified hatcheries</span><i aria-hidden="true">·</i><span>Free for farmers</span>
+  <span>🦐 Free PL sample before you book</span><i aria-hidden="true">·</i><span>PCR report before dispatch</span><i aria-hidden="true">·</i><span>Choose your broodstock line</span><i aria-hidden="true">·</i><span>SPF-certified hatcheries</span><i aria-hidden="true">·</i><span>Free for farmers</span>
 </div>
 
 <!-- ══ NAV ══ -->
@@ -904,6 +941,7 @@ footer{background:var(--navy-dark);padding:64px 20px 32px}
 
     <div class="hero-ctas">
       <a href="#consult" class="btn-primary">Book Free Consultation →</a>
+      <a href="#sample" class="btn-sample">🦐 Get a Free Sample</a>
       <a href="https://wa.me/918838262061?text=Hi%2C+I+need+help+finding+shrimp+seed+for+my+farm" class="btn-wa" target="_blank" rel="noopener noreferrer">💬 Chat on WhatsApp</a>
     </div>
 
@@ -990,6 +1028,54 @@ footer{background:var(--navy-dark);padding:64px 20px 32px}
         </div>
         <p class="species-p">Premium, higher-value crop with bigger harvest size. Fewer hatcheries produce good Monodon seed — we know which ones do, and check their recent batches.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FREE SAMPLE ══ -->
+<section id="sample" class="sample-sec" aria-labelledby="sample-h">
+  <div class="mx">
+    <div class="eyebrow reveal">Free Sample</div>
+    <h2 class="sec-h reveal" id="sample-h">See the seed with your own eyes.<br><em>Before you pay for a single lakh.</em></h2>
+    <p class="sec-sub reveal">Don't book on trust alone. Book a free consultation and we'll get you a small sample pack of PL from the hatchery we shortlist. The sample is free — you only pay the transport.</p>
+
+    <div class="sample-steps">
+      <div class="sample-step reveal">
+        <div class="sample-num">1</div>
+        <div class="sample-title">Book a free consultation</div>
+        <div class="sample-desc">Fill the form or WhatsApp us. Tell us you'd like a sample first.</div>
+      </div>
+      <div class="sample-step reveal">
+        <div class="sample-num">2</div>
+        <div class="sample-title">We shortlist the hatchery</div>
+        <div class="sample-desc">Our advisor matches your pond to the right hatchery and arranges a sample pack from that batch.</div>
+      </div>
+      <div class="sample-step reveal">
+        <div class="sample-num">3</div>
+        <div class="sample-title">Sample reaches you</div>
+        <div class="sample-desc">The PL is free. You pay only the transport cost — we tell you the amount upfront.</div>
+      </div>
+      <div class="sample-step reveal">
+        <div class="sample-num">4</div>
+        <div class="sample-title">Check it, then decide</div>
+        <div class="sample-desc">Happy with the seed? Book your full order. Not happy? No obligation — we find you another option.</div>
+      </div>
+    </div>
+
+    <div class="sample-check reveal">
+      <div class="sample-check-h">What to check in your sample</div>
+      <div class="exp-chips">
+        <span class="chip">🏊 Active swimming against the current</span>
+        <span class="chip">📏 Uniform size</span>
+        <span class="chip">🍽 Full, dark gut line</span>
+        <span class="chip">🧂 Survives a salinity stress test</span>
+        <span class="chip">👁 Clear body, no white spots</span>
+      </div>
+    </div>
+
+    <div class="sample-cta reveal">
+      <a href="https://wa.me/918838262061?text=Hi%2C+I%27d+like+a+free+PL+sample+before+booking+my+seed" class="btn-primary" target="_blank" rel="noopener noreferrer">🦐 Request Free Sample on WhatsApp →</a>
+      <span class="sample-fine">Available to every farmer who books a consultation. Sample size depends on the hatchery.</span>
     </div>
   </div>
 </section>
@@ -1498,6 +1584,13 @@ footer{background:var(--navy-dark);padding:64px 20px 32px}
           <span class="faq-ico" aria-hidden="true">+</span>
         </button>
         <div class="faq-ans">Yes, completely free. We earn a small, transparent referral fee from verified hatcheries and feed suppliers — similar to how insurance advisors earn commissions. This fee is disclosed upfront and is built into standard market pricing. You pay exactly what you'd pay going directly — or sometimes less, because we negotiate on your behalf.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          Is the PL sample really free?
+          <span class="faq-ico" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-ans">Yes. Every farmer who books a consultation can ask for a small sample pack of PL from the hatchery we shortlist. The seed itself is free — you only pay the transport cost to your farm, and we tell you that amount before we send it. Check the sample, and only book your full order if you're happy. There's no obligation.</div>
       </div>
       <div class="faq-item">
         <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
