@@ -700,6 +700,85 @@ footer{background:var(--navy-dark);padding:64px 20px 32px}
 .footer-legal a{color:rgba(255,255,255,.38);text-decoration:underline;text-underline-offset:2px}
 
 /* ═══════════════════════════════════
+   ANNOUNCE BAR
+═══════════════════════════════════ */
+.announce{
+  background:var(--navy-dark);color:#fff;
+  font-size:12px;font-weight:600;letter-spacing:.02em;
+  padding:9px 16px;line-height:1.5;
+  display:flex;flex-wrap:wrap;justify-content:center;align-items:center;row-gap:2px;
+}
+.announce span{white-space:nowrap}
+.announce i{font-style:normal;color:var(--teal-light);margin:0 8px}
+
+/* ═══════════════════════════════════
+   SPECIES
+═══════════════════════════════════ */
+.species-grid{margin-top:20px;display:grid;grid-template-columns:1fr;gap:16px}
+.species-card{
+  background:#fff;border:1px solid var(--border);border-radius:var(--r);
+  padding:24px;box-shadow:var(--sh-sm);
+}
+.species-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:10px}
+.species-name{font-family:'DM Serif Display',serif;font-size:1.35rem;color:var(--navy);line-height:1.2}
+.species-sci{font-size:12px;font-style:italic;color:var(--text-muted);margin-top:2px}
+.species-pl{
+  background:var(--teal-bg);color:var(--teal-dark);border-radius:100px;
+  padding:4px 12px;font-size:12px;font-weight:800;white-space:nowrap;
+}
+.species-p{font-size:14px;color:var(--text-body);line-height:1.8}
+
+/* ═══════════════════════════════════
+   BROODSTOCK + PCR
+═══════════════════════════════════ */
+.brood-grid{margin-top:44px;display:grid;grid-template-columns:1fr;gap:12px}
+.brood-card{
+  background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--r);
+  padding:20px 22px;transition:border-color .2s,box-shadow .2s;
+}
+.brood-card:hover{border-color:var(--border-t);box-shadow:var(--sh-md)}
+.brood-card.any{background:var(--teal-bg2);border-color:var(--border-t)}
+.brood-name{font-weight:800;color:var(--navy);font-size:15px;margin-bottom:4px}
+.brood-p{font-size:13px;color:var(--text-body);line-height:1.7}
+.brood-note{font-size:11px;color:var(--text-faint);margin-top:14px;line-height:1.6}
+
+.pcr-box{
+  margin-top:40px;background:var(--navy);color:#fff;border-radius:var(--rxl);
+  padding:32px 24px;
+}
+.pcr-box h3{font-family:'DM Serif Display',serif;font-size:1.6rem;font-weight:400;line-height:1.25;margin-bottom:12px}
+.pcr-box h3 em{color:var(--teal-light)}
+.pcr-box p{font-size:14px;color:rgba(255,255,255,.78);line-height:1.8;max-width:620px}
+.pcr-tests{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+.pcr-test{
+  border:1px solid rgba(255,255,255,.25);border-radius:100px;
+  padding:5px 14px;font-size:12px;font-weight:700;
+}
+.pcr-test::before{content:'✓ ';color:var(--teal-light)}
+.pcr-steps{display:grid;grid-template-columns:1fr;gap:10px;margin-top:8px}
+.pcr-step{
+  background:rgba(255,255,255,.07);border-radius:var(--rs);
+  padding:12px 14px;font-size:13px;color:rgba(255,255,255,.88);line-height:1.6;
+}
+.pcr-step b{color:var(--teal-light);margin-right:6px}
+
+/* ═══════════════════════════════════
+   FORM — SEED SPEC + LIVE SUMMARY
+═══════════════════════════════════ */
+.form-sec-label{
+  font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--teal-dark);margin:8px 0 12px;padding-top:16px;border-top:1px dashed var(--border);
+}
+.req-summary{
+  background:var(--teal-bg2);border:1px solid var(--border-t);border-radius:var(--rs);
+  padding:14px 16px;margin-bottom:16px;
+}
+.req-summary-h{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-dark);margin-bottom:8px}
+.req-summary-body{font-size:13px;color:var(--text-body);line-height:1.7}
+.req-summary-body .empty{color:var(--text-faint)}
+.req-summary-body b{color:var(--navy)}
+
+/* ═══════════════════════════════════
    WA FAB
 ═══════════════════════════════════ */
 .wa-fab{
@@ -727,6 +806,10 @@ footer{background:var(--navy-dark);padding:64px 20px 32px}
   .stats-grid{grid-template-columns:repeat(3,1fr)}
   .t-grid{grid-template-columns:1fr 1fr}
   .footer-grid{grid-template-columns:1.5fr 1fr 1fr 1fr}
+  .species-grid{grid-template-columns:1fr 1fr;max-width:640px;margin-left:auto;margin-right:auto}
+  .brood-grid{grid-template-columns:1fr 1fr}
+  .pcr-box{padding:44px 40px}
+  .pcr-steps{grid-template-columns:repeat(3,1fr)}
 }
 @media(min-width:960px){
   .hero{padding:108px 48px 88px}
@@ -739,6 +822,7 @@ footer{background:var(--navy-dark);padding:64px 20px 32px}
   .stats-grid{grid-template-columns:repeat(6,1fr)}
   .exp-num{font-size:4rem}
   .hatch-grid{grid-template-columns:repeat(4,1fr)}
+  .brood-grid{grid-template-columns:repeat(3,1fr)}
 }
 @media(min-width:1200px){
   .hero{padding:120px 80px 96px}
@@ -758,6 +842,11 @@ footer{background:var(--navy-dark);padding:64px 20px 32px}
 </head>
 <body>
 
+<!-- ══ ANNOUNCE BAR ══ -->
+<div class="announce" role="note">
+  <span>PCR report before dispatch</span><i aria-hidden="true">·</i><span>Choose your broodstock line</span><i aria-hidden="true">·</i><span>SPF-certified hatcheries</span><i aria-hidden="true">·</i><span>Free for farmers</span>
+</div>
+
 <!-- ══ NAV ══ -->
 <nav>
   <a href="#" class="nav-logo" aria-label="Brinely home">
@@ -772,6 +861,7 @@ footer{background:var(--navy-dark);padding:64px 20px 32px}
 
   <div class="nav-links">
     <a href="#seeds">Shrimp Seeds</a>
+    <a href="#broodstock">Broodstock</a>
     <a href="#how">How It Works</a>
     <a href="#farmers">Farmers</a>
     <a href="#faq">FAQ</a>
@@ -787,6 +877,7 @@ footer{background:var(--navy-dark);padding:64px 20px 32px}
 
 <nav class="nav-drawer" id="navDrawer" aria-label="Mobile menu">
   <a href="#seeds"   onclick="closeMenu()">Shrimp Seeds</a>
+  <a href="#broodstock" onclick="closeMenu()">Broodstock &amp; PCR</a>
   <a href="#how"     onclick="closeMenu()">How It Works</a>
   <a href="#farmers" onclick="closeMenu()">Farmer Stories</a>
   <a href="#faq"     onclick="closeMenu()">FAQ</a>
@@ -877,6 +968,29 @@ footer{background:var(--navy-dark);padding:64px 20px 32px}
       </div>
 
     </div>
+
+    <div class="species-grid">
+      <div class="species-card reveal">
+        <div class="species-top">
+          <div>
+            <div class="species-name">Vannamei</div>
+            <div class="species-sci">Litopenaeus vannamei · Pacific white shrimp</div>
+          </div>
+          <span class="species-pl">PL8 – PL15</span>
+        </div>
+        <p class="species-p">The workhorse of Indian shrimp farming. Fast growth, high stocking density, strong survival when seed is clean. We match the PL stage to your pond salinity and stocking plan.</p>
+      </div>
+      <div class="species-card reveal">
+        <div class="species-top">
+          <div>
+            <div class="species-name">Monodon</div>
+            <div class="species-sci">Penaeus monodon · Black tiger shrimp</div>
+          </div>
+          <span class="species-pl">PL12 – PL20</span>
+        </div>
+        <p class="species-p">Premium, higher-value crop with bigger harvest size. Fewer hatcheries produce good Monodon seed — we know which ones do, and check their recent batches.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -958,6 +1072,61 @@ footer{background:var(--navy-dark);padding:64px 20px 32px}
             <span class="chip">📞 Harvest planning support</span>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BROODSTOCK + PCR ══ -->
+<section id="broodstock" aria-labelledby="brood-h" style="border-top:1px solid var(--border)">
+  <div class="mx">
+    <div class="eyebrow reveal">Your Seed, Your Spec</div>
+    <h2 class="sec-h reveal" id="brood-h">Choose your broodstock line.<br><em>We find who has it.</em></h2>
+    <p class="sec-sub reveal">Genetics decide growth and disease resistance. Tell us which line you trust — we check which partner hatcheries are running it this season, and compare them for you.</p>
+
+    <div class="brood-grid">
+      <div class="brood-card reveal">
+        <div class="brood-name">SIS</div>
+        <div class="brood-p">Shrimp Improvement Systems. Widely used SPF line, known for fast growth.</div>
+      </div>
+      <div class="brood-card reveal">
+        <div class="brood-name">SyAqua</div>
+        <div class="brood-p">Popular SPF line bred for robustness across varied pond conditions.</div>
+      </div>
+      <div class="brood-card reveal">
+        <div class="brood-name">Kona Bay</div>
+        <div class="brood-p">Hendrix Genetics line, selected for survival and disease tolerance.</div>
+      </div>
+      <div class="brood-card reveal">
+        <div class="brood-name">Blue Genetics</div>
+        <div class="brood-p">SPF line with a strong record in high-density culture.</div>
+      </div>
+      <div class="brood-card reveal">
+        <div class="brood-name">API (American Penaeid)</div>
+        <div class="brood-p">Established US-origin line, preferred by many experienced farmers.</div>
+      </div>
+      <div class="brood-card any reveal">
+        <div class="brood-name">Not sure? Ask us</div>
+        <div class="brood-p">We recommend a line based on your salinity, pond history, and season.</div>
+      </div>
+    </div>
+    <p class="brood-note reveal">Availability of each line changes season to season. Brinely is independent and not affiliated with any broodstock supplier.</p>
+
+    <div class="pcr-box reveal">
+      <div class="eyebrow" style="color:var(--teal-light)">Our Guarantee</div>
+      <h3>See the PCR report<br><em>before your seed ships.</em></h3>
+      <p>Every batch we recommend comes with its PCR test report. We send it to your WhatsApp before dispatch — you check it, you approve, then it ships. No report, no dispatch.</p>
+      <div class="pcr-tests">
+        <span class="pcr-test">WSSV</span>
+        <span class="pcr-test">IHHNV</span>
+        <span class="pcr-test">EHP</span>
+        <span class="pcr-test">AHPND / EMS</span>
+        <span class="pcr-test">MBV</span>
+      </div>
+      <div class="pcr-steps">
+        <div class="pcr-step"><b>1</b>Hatchery tests your batch</div>
+        <div class="pcr-step"><b>2</b>Report sent to your WhatsApp</div>
+        <div class="pcr-step"><b>3</b>You approve, seed is dispatched in oxygen-packed bags</div>
       </div>
     </div>
   </div>
@@ -1248,11 +1417,60 @@ footer{background:var(--navy-dark);padding:64px 20px 32px}
               <input type="date" class="form-input" id="f-date">
             </div>
           </div>
+          <div class="form-sec-label">Seed spec (optional — skip if unsure)</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="f-species">Species</label>
+              <select class="form-select" id="f-species">
+                <option value="">Select species</option>
+                <option>Vannamei</option>
+                <option>Monodon</option>
+                <option>Not sure — advise me</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-qty">Quantity (lakh PL)</label>
+              <input type="number" class="form-input" id="f-qty" placeholder="e.g. 5" min="0" step="0.5" inputmode="decimal">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="f-pl">PL Stage</label>
+              <select class="form-select" id="f-pl">
+                <option value="">Select stage</option>
+                <option>PL8</option><option>PL10</option><option>PL12</option>
+                <option>PL15</option><option>PL18</option><option>PL20</option>
+                <option>Advise me</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-brood">Broodstock Line</label>
+              <select class="form-select" id="f-brood">
+                <option value="">Any / advise me</option>
+                <option>SIS</option>
+                <option>SyAqua</option>
+                <option>Kona Bay</option>
+                <option>Blue Genetics</option>
+                <option>API (American Penaeid)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="f-sal">Pond Salinity (ppt)</label>
+              <input type="number" class="form-input" id="f-sal" placeholder="e.g. 15" min="0" max="60" inputmode="decimal">
+            </div>
+          </div>
+
           <div class="form-group" style="margin-bottom:16px">
             <label class="form-label" for="f-notes">Specific requirements or past problems?</label>
             <textarea class="form-textarea" id="f-notes" placeholder="e.g. Had WSSV last season, need Tamil-speaking advisor, prefer SPF broodstock..."></textarea>
           </div>
-          <button class="form-submit" onclick="submitForm()">Book Free Consultation →</button>
+          <div class="req-summary" aria-live="polite">
+            <div class="req-summary-h">Your request</div>
+            <div class="req-summary-body" id="req-summary"><span class="empty">Fill the form — your request summary appears here.</span></div>
+          </div>
+          <button class="form-submit" onclick="submitForm()">Send Request on WhatsApp →</button>
           <p class="form-note">📞 We call within 2 hours &nbsp;·&nbsp; 🔒 Your data is private &nbsp;·&nbsp; 💰 Always free</p>
         </div>
 
@@ -1457,14 +1675,44 @@ function toggleFaq(btn) {
 }
 
 /* Form */
+const val = id => document.getElementById(id).value.trim();
+const esc = t => t.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function seedSpec() {
+  const species = val('f-species'), qty = val('f-qty'), pl = val('f-pl');
+  const brood = val('f-brood'), sal = val('f-sal');
+  return {species, qty, pl, brood, sal};
+}
+
+function updateSummary() {
+  const s = seedSpec();
+  const parts = [];
+  if (s.qty || s.species) parts.push('<b>' + esc([s.qty && s.qty + ' lakh', s.species || 'PL'].filter(Boolean).join(' ')) + '</b>');
+  if (s.pl)    parts.push(`stage <b>${esc(s.pl)}</b>`);
+  if (s.brood) parts.push(`<b>${esc(s.brood)}</b> broodstock`);
+  if (s.sal)   parts.push(`for <b>${esc(s.sal)} ppt</b> water`);
+  const state = val('f-state'), pond = val('f-pond'), date = val('f-date');
+  if (pond)  parts.push(`${esc(pond)} pond`);
+  if (state) parts.push(`in <b>${esc(state)}</b>`);
+  if (date)  parts.push(`stocking <b>${esc(date)}</b>`);
+  document.getElementById('req-summary').innerHTML = parts.length
+    ? parts.join(' · ') + '<br>PCR report sent to your WhatsApp before dispatch.'
+    : '<span class="empty">Fill the form — your request summary appears here.</span>';
+}
+document.querySelectorAll('#req-form input, #req-form select').forEach(el => {
+  el.addEventListener('input', updateSummary);
+  el.addEventListener('change', updateSummary);
+});
+
 function submitForm() {
-  const name  = document.getElementById('f-name').value.trim();
-  const mob   = document.getElementById('f-mobile').value.trim();
-  const state = document.getElementById('f-state').value;
-  const pond  = document.getElementById('f-pond').value.trim();
-  const need  = document.getElementById('f-need').value;
-  const date  = document.getElementById('f-date').value;
-  const notes = document.getElementById('f-notes').value.trim();
+  const name  = val('f-name');
+  const mob   = val('f-mobile');
+  const state = val('f-state');
+  const pond  = val('f-pond');
+  const need  = val('f-need');
+  const date  = val('f-date');
+  const notes = val('f-notes');
+  const s     = seedSpec();
 
   if (!name || !mob || !state || !pond) {
     alert('Please fill in: Name, Mobile, State, and Pond Size.');
@@ -1484,6 +1732,11 @@ function submitForm() {
     `🌊 *Pond Size:* ${pond}`,
     need  ? `🔍 *Help needed:* ${need}`        : '',
     date  ? `📅 *Stocking Date:* ${date}`       : '',
+    s.species ? `🦐 *Species:* ${s.species}`     : '',
+    s.qty     ? `🔢 *Quantity:* ${s.qty} lakh PL` : '',
+    s.pl      ? `📏 *PL Stage:* ${s.pl}`          : '',
+    s.brood   ? `🧬 *Broodstock:* ${s.brood}`     : '',
+    s.sal     ? `💧 *Salinity:* ${s.sal} ppt`     : '',
     notes ? `📝 *Notes:* ${notes}`               : '',
   ].filter(Boolean).join('\n');
 
